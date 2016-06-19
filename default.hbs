@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="True" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <!-- Resources built by Grunt -->
+    <link rel="stylesheet" type="text/css" href="{{asset "prebuilt/dist/base.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "prebuilt/dist/Diaspora.css"}}"/>
+    {{ghost_head}}
+  </head>
+  <body class="loading">
+    <div id="loader"></div>
+    {{{body}}}
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{asset "prebuilt/static/jquery.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "prebuilt/dist/plugin.js"}}"></script>
+    <script type="text/javascript" src="{{asset "prebuilt/dist/Diaspora.js"}}"></script>
+    {{ghost_foot}}
+  </body>
+</html>

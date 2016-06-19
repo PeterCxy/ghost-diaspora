@@ -1,0 +1,18 @@
+{{#foreach posts}}
+<div class="post" {{#is "home"}}{{#if @first}}style="display: none;"{{/if}}{{/is}}>
+  <a data-id="{{id}}" href="{{url absolute="true"}}" title="title">
+    <img width="680" height="440" src="
+    {{#if image}}
+    {{image}}
+    {{else}}
+    {{#if @blog.cover}}{{@blog.cover}}{{else}}{{asset "prebuilt/images/default.jpg"}}{{/if}}
+    {{/if}}
+    " class="cover" />
+  </a>
+  <div class="else">
+    <p>{{date format="DD MMMM YYYY"}}</p>
+    <h3><a data-id="{{id}}" class="posttitle" href="{{url absolute="true"}}">{{title}}</a></h3>
+    <p>{{excerpt characters="50"}}...</p>
+  </div>
+</div>
+{{/foreach}}

@@ -1,0 +1,53 @@
+{{!< default}}
+<div class="nav">
+  {{navigation}}
+  <p>&copy; {{@blog.title}}. Proudly powered by Ghost.</p>
+</div>
+<div id="container">
+  {{#is "home"}}
+  <div id="screen">
+    <div id="mark">
+      <div class="layer" data-depth="0.4">
+        <img id="cover" crossorigin="anonymous" src="
+        {{#foreach posts}}{{#if @first}}
+        {{#if image}}
+        {{image}}
+        {{else}}
+        {{#if @blog.cover}}{{@blog.cover}}{{else}}{{asset "prebuilt/images/default.jpg"}}{{/if}}
+        {{/if}}
+        {{/if}}{{/foreach}}
+        " style="object-fit: contain;"/>
+      </div>
+    </div>
+
+    <div id="vibrant">
+      <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+        <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
+      </svg>
+      <div></div>
+    </div>
+
+    <div id="header">
+      <div>
+        <a class="icon-logo" href="/"></a>
+        <div class="icon-menu switchmenu"></div>
+      </div>
+    </div>
+
+    {{#foreach posts}}
+    {{#if @first}}
+    <div id="post0">
+      <p>{{date format="DD MMMM YYYY"}}</p>
+      <h2><a data-id="{{id}}" class="posttitle" href="{{url absolute="true"}}">{{title}}</a></h2>
+      <p>{{excerpt characters="50"}}...</p>
+    </div>
+    {{/if}}
+    {{/foreach}}
+  </div>
+  <div id="primary">
+  {{/is}}
+  {{> "loop"}}
+  </div>
+  {{pagination}}
+</div>
+<div id="preview" class="trans"></div>
