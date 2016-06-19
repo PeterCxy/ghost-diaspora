@@ -20,3 +20,10 @@ Developement
 2. Run `npm install` in this folder
 3. Install `grunt-cli` and run `grunt` here
 4. You are all set. Everytime you edit the style, you should run `grunt` again to build the theme
+
+For Chinese Users / 中国用户注意
+---
+
+This theme requires resources from `cdn.materialdesignicons.com` `fonts.googleapis.com` `cdnjs.cloudflare.com`, which might be unreachable or reachable but slow in China. In this case, you should replace the URL with an alternative CDN URL (e.g. USTC Google Fonts CDN)
+
+本主题引用了 `cdn.materialdesignicons.com` `fonts.googleapis.com` `cdnjs.cloudflare.com` 的资源，在中国访问较慢或无法访问。所以中国用户应当自行寻找替代用的镜像CDN并替换对应URL(例如：USTC CDN)。
