@@ -9,6 +9,14 @@
        this.page.identifier = $('#page_id').text()
  };
 
+var go_back = function() {
+  if (history.length == 0) {
+    window.location.href = "/";
+  } else {
+    history.back();
+  }
+};
+
 var Home = location.href,
     Pages = 4,
     xhr,
