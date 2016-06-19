@@ -338,24 +338,12 @@ $(function() {
 
         })
 
-        Diaspora.player($('.icon-play').data('id'))
-
-        $('.icon-icon, .image-icon').attr('href', '/')
-
-        // get download link
-        $('.content img').each(function() {
-            if ($(this).attr('src').indexOf('/uploads/2014/downloading.png') > -1) {
-                $(this).hide()
-                $('.downloadlink').attr('href', $(this).parent().attr('href')).css('display', 'block')
-            }
-        })
-
         $('#top').show()
 
     }
 
     $(window).on('scroll', function() {
-        if ($('.scrollbar').length && !Diaspora.P() && !$('.icon-images').hasClass('active')) {
+        if ($('.scrollbar').length && !Diaspora.P()) {
             var st = $(window).scrollTop(),
                 ct = $('.content').height();
 
@@ -458,7 +446,7 @@ $(function() {
             break;
 
             // post images
-            case (tag.indexOf('icon-images') != -1):
+            /*case (tag.indexOf('icon-images') != -1):
                 window.scrollTo(0, 0)
 
                 var d = $('.icon-images');
@@ -511,29 +499,7 @@ $(function() {
                     }
 
                 }
-            break;
-
-            // qrcode
-            case (tag.indexOf('icon-wechat') != -1):
-                if ($('.icon-wechat').hasClass('tg')) {
-                    $('#qr').toggle()
-                } else {
-                    $('.icon-wechat').addClass('tg')
-                    $('#qr').qrcode({ width: 128, height: 128, text: location.href}).toggle()
-                }
-            break;
-
-            // audio play
-            case (tag.indexOf('icon-play') != -1):
-                $('#audio-'+ $('.icon-play').data('id') +'-1')[0].play()
-                $('.icon-play').removeClass('icon-play').addClass('icon-pause')
-            break;
-
-            // audio pause
-            case (tag.indexOf('icon-pause') != -1):
-                $('#audio-'+ $('.icon-pause').data('id') +'-1')[0].pause()
-                $('.icon-pause').removeClass('icon-pause').addClass('icon-play')
-            break;
+            break;*/
 
             // post like
             case (tag.indexOf('icon-like') != -1):

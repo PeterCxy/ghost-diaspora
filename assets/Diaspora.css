@@ -43,7 +43,7 @@ audio {
 #header > div {
     margin: 0 60px;
     position: relative;
-} 
+}
 .icon-menu {
     font-size: 20px;
     padding: 6px 6px 5px;
@@ -115,7 +115,7 @@ audio {
 }
 
 .post {
-    margin: 100px auto 0; 
+    margin: 100px auto 0;
     width: 1200px;
     position: relative;
 }
@@ -178,7 +178,7 @@ audio {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
-    font-family: "icomoon","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; 
+    font-family: "icomoon","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 .here span:before {
     display: inline-block;
@@ -247,12 +247,12 @@ audio {
 body.touch #top {
     position: relative;
 }
-.icon-icon {
+.icon-icon, .go-back {
     color: #333;
     font-size: 20px;
     position: absolute;
     left: 14px;
-    top: 16px;
+    top: 14px;
 }
 .image-icon {
     -webkit-background-size: 24px 24px;
@@ -443,15 +443,12 @@ body.mu .icon-logo {
 }
 .section {
     position: relative;
-    left: -100%;
-    width: 200%;
+    left: 0;
+    width: 100%;
     overflow: hidden;
-    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-    -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 .images, .article {
-    width: 50%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -482,7 +479,7 @@ body.touch .images, body.touch .article {
     margin-top: -15px;
     margin-left: -15px;
     position: absolute;
-    background: rgba(0,0,0,.7); 
+    background: rgba(0,0,0,.7);
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
     -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
     transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
@@ -682,13 +679,13 @@ h1.title {
 }
 .relate li div {
     display: inline-block;
-    width: 70%;
+    width: 64%;
     vertical-align: top;
     margin-right: 3%;
 }
 .relate li > a {
     display: inline-block;
-    width: 27%;
+    width: 30%;
     vertical-align: top;
 }
 .relate li div a {

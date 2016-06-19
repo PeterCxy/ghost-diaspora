@@ -1,0 +1,72 @@
+{{!< default}}
+{{#post}}
+<div id="single">
+  <div id="top">
+    <div class="bar"></div>
+    <a class="go-back" href="javascript:history.back()"><i class="mdi mdi-arrow-left"></i></a>
+    <h3 class="subtitle">{{title}}</h3>
+    <div class="social">
+      <!-- TODO Social Links -->
+    </div>
+    <div class="scrollbar"></div>
+  </div>
+
+  <div class="section">
+    <div class="article">
+      <div>
+        <h1 class="title">{{title}}</h1>
+        <div class="stuff">
+          <span>{{date format="DD MMMM YYYY"}}</span>
+        </div>
+        <div class="content">
+          {{content}}
+        </div>
+        <div class="comment link" data-id="{{id}}">Comments</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relate">
+    <ul>
+      <h3><em>Related</em><span>
+        <a href="javascript: window.scrollTo(0, 0);">Back to top</a>
+      </span></h3>
+      <p id="prev_next" style="display: none;"></p>
+      {{#next_post}}
+      <li>
+        <div>
+          <a class="relatea" data-id="{{id}}" href="{{url absolute="true"}}" title="{{title}}">{{title}}</a>
+          <p>{{excerpt characters="100"}}</p>
+        </div>
+        <a href="{{url absolute="true"}}" data-id="{{id}}" title="{{title}}">
+          <img class="relateimg" src="
+            {{#if image}}
+            {{image}}
+            {{else}}
+            {{#if @blog.cover}}{{@blog.cover}}{{else}}{{asset "prebuilt/images/default.jpg"}}{{/if}}
+            {{/if}}
+          " alt="{{title}}" />
+        </a>
+      </li>
+      {{/next_post}}
+      {{#prev_post}}
+      <li>
+        <div>
+          <a class="relatea" data-id="{{id}}" href="{{url absolute="true"}}" title="{{title}}">{{title}}</a>
+          <p>{{excerpt characters="100"}}</p>
+        </div>
+        <a href="{{url absolute="true"}}" data-id="{{id}}" title="{{title}}">
+          <img class="relateimg" src="
+            {{#if image}}
+            {{image}}
+            {{else}}
+            {{#if @blog.cover}}{{@blog.cover}}{{else}}{{asset "prebuilt/images/default.jpg"}}{{/if}}
+            {{/if}}
+          " alt="{{title}}" />
+        </a>
+      </li>
+      {{/prev_post}}
+    </ul>
+  </div>
+</div>
+{{/post}}
