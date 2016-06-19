@@ -254,6 +254,13 @@ body.touch #top {
     left: 14px;
     top: 14px;
 }
+
+.social a {
+    color: #333;
+    font-size: 20px;
+    margin-right: 14px;
+}
+
 .image-icon {
     -webkit-background-size: 24px 24px;
     -moz-background-size: 24px 24px;
