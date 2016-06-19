@@ -840,7 +840,7 @@ h1.title {
     z-index: 4;
 }
 
-.mu .text-logo {
+body.mu .text-logo {
     color: black;
 }
 
