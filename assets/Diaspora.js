@@ -281,6 +281,7 @@ $(function() {
 
             setTimeout(function() {
                 $('html, body').removeClass('loading')
+                $('#primary').show()
             }, 1000)
 
             $('#mark').parallax()
@@ -330,6 +331,7 @@ $(function() {
 
         setTimeout(function() {
             $('html, body').removeClass('loading')
+            $('#primary').show()
         }, 1000)
 
         window.addEventListener('popstate', function(e) {
