@@ -4,10 +4,10 @@
  * @url http://lorem.in
  */
 
- var disqus_config = function () {
-       this.page.url = $('#page_url').text()
-       this.page.identifier = $('#page_id').text()
- };
+var disqus_config = function () {
+  this.page.url = $('#page_url').text()
+  this.page.identifier = $('#page_id').text()
+};
 
 var go_back = function() {
   if (history.length == 0) {
