@@ -17,6 +17,9 @@
         <h1 class="title">{{title}}</h1>
         <div class="stuff">
           <span>{{date format="DD MMMM YYYY"}}</span>
+          {{#foreach tags}}
+          <span><a href="{{url}}">{{name}}</a></span>
+          {{/foreach}}
         </div>
         <div class="content">
           {{content}}

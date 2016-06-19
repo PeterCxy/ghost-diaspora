@@ -620,6 +620,11 @@ h1.title {
     display: inline-block;
     margin-right: 20px;
 }
+
+.stuff span a {
+    color: #666;
+}
+
 .stuff .likeThis {
     pointer-events: none;
 }
