@@ -202,6 +202,7 @@ var Diaspora = {
 
     loaded: function() {
         $('#loader').removeClass().hide()
+        $('.content').show()
     },
 
     F: function(id, w, h) {
@@ -282,6 +283,7 @@ $(function() {
             setTimeout(function() {
                 $('html, body').removeClass('loading')
                 $('#primary').show()
+                $('.content').show()
             }, 1000)
 
             $('#mark').parallax()
@@ -332,6 +334,7 @@ $(function() {
         setTimeout(function() {
             $('html, body').removeClass('loading')
             $('#primary').show()
+            $('.content').show()
         }, 1000)
 
         window.addEventListener('popstate', function(e) {
