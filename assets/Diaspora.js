@@ -4,6 +4,11 @@
  * @url http://lorem.in
  */
 
+ var disqus_config = function () {
+       this.page.url = $('#page_url').text()
+       this.page.identifier = $('#page_id').text()
+ };
+
 var Home = location.href,
     Pages = 4,
     xhr,
@@ -430,24 +435,17 @@ $(function() {
             // comment
             case (tag.indexOf('comment') != -1):
                 Diaspora.loading()
-                $('.comment').removeClass('link').html('')
+                $('.comment').removeClass('link').html('<div id="disqus_thread"></div>');
 
-                var id = $('.comment').data('id'),
-                    get_comments = function() {
-                        var el = document.createElement('div');
-                        el.setAttribute('data-thread-key', id)
-                        DUOSHUO.EmbedThread(el)
-                        $('.comment').html(el)
-                        Diaspora.loaded()
-                    };
+                (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//' + $('#disqus_username').text() + '.disqus.com/embed.js'; // Replace `example` with your Disqus username
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                })();
 
-                if (window.DUOSHUO) {
-                    get_comments()
-                } else {
-                    $.getScript('//static.duoshuo.com/embed.js', function() {
-                        get_comments()
-                    })
-                }
+
+                Diaspora.loaded()
             break;
 
             // post images
