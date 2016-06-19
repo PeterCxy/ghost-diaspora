@@ -84,7 +84,7 @@ var Diaspora = {
 
                     Diaspora.preview()
 
-                    setTimeout(function() { Diaspora.player(state.d) }, 0)
+                    //setTimeout(function() { Diaspora.player(state.d) }, 0)
                 })
             }
 
@@ -159,6 +159,9 @@ var Diaspora = {
                         'overflow-y': 'auto'
                     }).removeClass('trans')
                     $('#top').show()
+                    $('pre code').each(function(i, block) {
+                      hljs.highlightBlock(block);
+                    });
 
                     Diaspora.loaded()
                 }, 500)
