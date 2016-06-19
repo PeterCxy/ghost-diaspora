@@ -4,7 +4,6 @@
   <p>&copy; {{@blog.title}}. Proudly powered by Ghost.</p>
 </div>
 <div id="container">
-  {{#is "home"}}
   <div id="screen">
     <div id="mark">
       <div class="layer" data-depth="0.4">
@@ -45,7 +44,6 @@
     {{/foreach}}
   </div>
   <div id="primary">
-  {{/is}}
   {{> "loop"}}
   </div>
   {{pagination}}
