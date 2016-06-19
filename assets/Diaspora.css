@@ -815,6 +815,19 @@ h1.title {
     background: #f9f9f9;
 }
 
+.text-logo {
+    display: inline-flex;
+    position: relative;
+    font-family: "Grand Hotel", cursive;
+    font-size: 36px;
+    color: white;
+    z-index: 4;
+}
+
+.mu .text-logo {
+    color: black;
+}
+
 #preview + canvas {
     display: none;
 }
