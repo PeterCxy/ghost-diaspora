@@ -400,7 +400,7 @@ $(function() {
                     return
                 }
 
-                tag.html('加载中..').data('status', 'loading')
+                tag.html('Loading..').data('status', 'loading')
                 Diaspora.loading()
 
                 Diaspora.L(tag.attr('href'), function(data) {
@@ -416,7 +416,7 @@ $(function() {
 
                     Diaspora.loaded()
                 }, function() {
-                    tag.html('加载更多').data('status', 'loaded')
+                    tag.html('More').data('status', 'loaded')
                 })
 
                 return false;
