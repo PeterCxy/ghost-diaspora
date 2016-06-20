@@ -10,7 +10,7 @@ var disqus_config = function () {
 };
 
 var go_back = function() {
-  if (history.length == 0) {
+  if ($('#preview').length == 0) {
     window.location.href = "/";
   } else {
     history.back();
