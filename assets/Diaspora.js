@@ -427,7 +427,7 @@ $(function() {
                 Diaspora.L(tag.attr('href'), function(data) {
                     var link = $(data).find('.more').attr('href');
                     if (link != undefined) {
-                        tag.attr('href', link).html('加载更多').data('status', 'loaded')
+                        tag.attr('href', link).html('More').data('status', 'loaded')
                         tag.data('page', parseInt(tag.data('page')) + 1)
                     } else {
                         $('#pager').remove()
