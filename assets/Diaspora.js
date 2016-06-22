@@ -18,7 +18,7 @@ var go_back = function() {
 };
 
 var Home = location.href,
-    Pages = 4,
+    Pages = Number.MAX_VALUE,
     xhr,
     xhrUrl = '';
 
